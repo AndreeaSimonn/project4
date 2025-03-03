@@ -1,45 +1,48 @@
 /* ===== Global Styles (Applies to All Pages) ===== */
 body {
-    font-family: 'Lora', serif;  /* Classic book font */
-    background-color: #f1e3c6;  /* Slightly darker beige for readability */
-    color: #333;  /* Dark gray for high contrast */
-    text-align: left;
-    max-width: 50em;  /* Constrains text width for easy reading */
-    margin: 0 auto;
+    background-color: #f1e3c6; /* Slightly darker beige for readability */
+    color: #333; /* Dark gray for high contrast */
+    font-family: 'Lora', serif; /* Classic book font */
     line-height: 1.5em;
+    margin: 0 auto;
+    max-width: 50em; /* Constrains text width for easy reading */
     padding: 20px;
+    text-align: left;
 }
 
 /* ===== Header (Uniform Across All Pages) ===== */
 header {
-    text-align: center;
-    padding: 20px;
     background-color: #d3a36a;
     color: white;
     font-size: 1.5em;
+    padding: 20px;
+    text-align: center;
 }
 
 /* ===== Navigation (Same Style for Top and Bottom) ===== */
 nav ul {
+    background-color: #d3a36a;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
-    background-color: #d3a36a;
     list-style-type: none;
+    padding: 10px;
 }
 
-nav li {
-    list-style: none;
+nav ul li {
+    margin-right: 20px; /* Replaces gap for better support */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Removes margin from last item */
 }
 
 nav a {
-    text-decoration: none;
+    border-radius: 5px;
     color: white;
     font-weight: bold;
     padding: 5px 15px;
+    text-decoration: none;
     transition: 0.3s;
-    border-radius: 5px;
 }
 
 nav a:hover {
@@ -54,12 +57,12 @@ nav a:hover {
 }
 
 .bottom-nav a {
-    text-decoration: none;
+    background-color: #d3a36a;
+    border-radius: 5px;
+    color: white;
     font-weight: bold;
     padding: 10px 15px;
-    background-color: #d3a36a;
-    color: white;
-    border-radius: 5px;
+    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -69,12 +72,12 @@ nav a:hover {
 
 /* ===== Main Content Styling (Darker Background for Cover Page) ===== */
 main {
-    padding: 20px;
-    background-color: #e6d2a9;  /* Darker warm beige for better contrast */
+    background-color: #e6d2a9; /* Darker warm beige for better contrast */
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;  /* Ensures text and button are centered */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Removed unnecessary px from 0 */
+    padding: 20px;
     padding-bottom: 40px;
+    text-align: center;
 }
 
 /* ===== Paragraph Styling (Uniform Across All Pages) ===== */
@@ -85,42 +88,43 @@ p {
 
 /* ===== Image Styling (Uniform for All Images) ===== */
 img {
-    max-width: 80%;
+    border-radius: 10px;
     display: block;
     margin: 20px auto;
-    border-radius: 10px;
+    max-width: 80%;
 }
 
 /* ===== Footer (Same Style on All Pages) ===== */
 footer {
-    text-align: center;
-    padding: 10px;
     background-color: #d3a36a;
     color: white;
     margin-top: 20px;
+    padding: 10px;
+    text-align: center;
 }
 
 /* ===== Preformatted Text (For Mouse's Tale in Chapter 3) ===== */
-mouse-tale {
-    background-color: #d8c3a5;  /* Warm beige background for distinction */
-    padding: 15px;
-    border-left: 5px solid #8b5e3c;  /* Dark brown left border for visual cue */
-    font-family: 'Courier New', monospace;  /* Old-fashioned typewriter font */
+.mouse-tale {
+    background-color: #d8c3a5; /* Warm beige background for distinction */
+    border-left: 5px solid #8b5e3c; /* Dark brown left border for visual cue */
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    display: block;
+    font-family: 'Courier New', monospace; /* Old-fashioned typewriter font */
     font-size: 1.1em;
     line-height: 1.4em;
-    white-space: pre-wrap;  /* Keeps text formatting as in the book */
-    display: block;
-    text-align: left;  /* Aligns like classic book text */
     margin: 20px auto;
     max-width: 90%;
-    border-radius: 5px;  /* Slightly rounded corners for a polished look */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);  /* Soft shadow for depth */
-} 
+    padding: 15px;
+    text-align: left; /* Aligns like classic book text */
+    white-space: pre-wrap; /* Keeps text formatting as in the book */
+}
+
 /* ===== Flexbox Applied to Content Section (Consistent Layout) ===== */
 .container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
@@ -135,23 +139,22 @@ a:hover {
 
 /* ===== Styling for "Read Chapter 1" Button on Home Page ===== */
 .start-button {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.3em;
-    padding: 15px 25px;
-    background-color: #8b5e3c;  /* Strong brown for better visibility */
-    color: #fff !important;  /* White text for contrast */
+    background-color: #8b5e3c; /* Strong brown for better visibility */
+    border: 2px solid black; /* Black border for extra visibility */
     border-radius: 8px;
-    text-align: center;
+    color: white;
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
     margin-top: 20px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
-    border: 2px solid black;  /* Black border for extra visibility */
 }
 
 /* Hover effect to make it interactive */
 .start-button:hover {
-    background-color: #5b3a29;  /* Darker brown on hover */
-    transform: scale(1.05);  /* Slight enlargement for effect */
+    background-color: #5b3a29; /* Darker brown on hover */
+    transform: scale(1.05); /* Slight enlargement for effect */
 }
-
