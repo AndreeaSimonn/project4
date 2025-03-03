@@ -1,0 +1,157 @@
+/* ===== Global Styles (Applies to All Pages) ===== */
+body {
+    font-family: 'Lora', serif;  /* Classic book font */
+    background-color: #f1e3c6;  /* Slightly darker beige for readability */
+    color: #333;  /* Dark gray for high contrast */
+    text-align: left;
+    max-width: 50em;  /* Constrains text width for easy reading */
+    margin: 0 auto;
+    line-height: 1.5em;
+    padding: 20px;
+}
+
+/* ===== Header (Uniform Across All Pages) ===== */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #d3a36a;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* ===== Navigation (Same Style for Top and Bottom) ===== */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #d3a36a;
+    list-style-type: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #a8744a;
+}
+
+/* ===== Bottom Navigation (Next/Previous Chapter Links) ===== */
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #d3a36a;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.bottom-nav a:hover {
+    background-color: #a8744a;
+}
+
+/* ===== Main Content Styling (Darker Background for Cover Page) ===== */
+main {
+    padding: 20px;
+    background-color: #e6d2a9;  /* Darker warm beige for better contrast */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;  /* Ensures text and button are centered */
+    padding-bottom: 40px;
+}
+
+/* ===== Paragraph Styling (Uniform Across All Pages) ===== */
+p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+/* ===== Image Styling (Uniform for All Images) ===== */
+img {
+    max-width: 80%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* ===== Footer (Same Style on All Pages) ===== */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #d3a36a;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ===== Preformatted Text (For Mouse's Tale in Chapter 3) ===== */
+mouse-tale {
+    background-color: #d8c3a5;  /* Warm beige background for distinction */
+    padding: 15px;
+    border-left: 5px solid #8b5e3c;  /* Dark brown left border for visual cue */
+    font-family: 'Courier New', monospace;  /* Old-fashioned typewriter font */
+    font-size: 1.1em;
+    line-height: 1.4em;
+    white-space: pre-wrap;  /* Keeps text formatting as in the book */
+    display: block;
+    text-align: left;  /* Aligns like classic book text */
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 5px;  /* Slightly rounded corners for a polished look */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);  /* Soft shadow for depth */
+} 
+/* ===== Flexbox Applied to Content Section (Consistent Layout) ===== */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===== Accessibility Improvements (Uniform for Links) ===== */
+a {
+    color: #5b3a29;
+}
+
+a:hover {
+    color: #a8744a;
+}
+
+/* ===== Styling for "Read Chapter 1" Button on Home Page ===== */
+.start-button {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 15px 25px;
+    background-color: #8b5e3c;  /* Strong brown for better visibility */
+    color: #fff !important;  /* White text for contrast */
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid black;  /* Black border for extra visibility */
+}
+
+/* Hover effect to make it interactive */
+.start-button:hover {
+    background-color: #5b3a29;  /* Darker brown on hover */
+    transform: scale(1.05);  /* Slight enlargement for effect */
+}
+
